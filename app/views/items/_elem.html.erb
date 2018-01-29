@@ -1,0 +1,25 @@
+
+
+	
+		
+			<div class="col-lg-4">
+				<div class="thumbnail">
+					<%= image_tag item.image.url, width: 300, height: 200 %>
+					<p><strong><h3 style="color: #0772A1;"></h3></strong></p>
+					<h3 style="text-align: center;">| <%= item.name %> |</h3>
+					<p style="text-align: center;"><%=item.description%></p>
+					<h4 style="text-align: center;">Price: <span style="color: green;"><%= item.price %> $</span></h4>
+					<p style="text-align: center;"><%if @orders == nil or @orders[item.id] == nil %>
+					<%= link_to "add to my charm", order_path(id: item.id), class: "btn btn-default", method: :post %>
+					<%else%>
+					<%= link_to "delete", order_path(@orders[item.id].id), class: "btn btn-default", method: :delete %>
+					<%end%>
+					<%= link_to "comment", item_path(item.id), class: "btn btn-default" %>
+				</p>
+				</div>
+			
+			</div>
+		
+	
+
+

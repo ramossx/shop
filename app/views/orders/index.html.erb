@@ -1,0 +1,48 @@
+<h1 style="text-align: center;">Корзина</h1>
+<%if @orders != [] %>
+<% @orders.each do |order|%>
+
+
+<hr>
+<h4> Корзина: <b style="color: green;"><%=order.item.name%></b></h4>
+<h4> Counts: <b style="color: green;"><%=link_to "+",plus_path(order.item.id)%>|<%=order.counts%>|<%=link_to "-", minus_path(order.item.id) %>  </b> </h4> 
+<h4> Category: <b style="color: green;"><%= order.item.categorie.name %></b></h4> 
+<br/>
+<b><h6>Статус корзини:  <%= order.stats%> </h6></b>
+<%= link_to "Delete", order_path(order.id), class: "btn btn-default" ,method: :delete %> 
+
+
+<%if order.stats == false %>
+
+
+<%=form_for :time , url:confirm_path do |f|%>
+
+<%= f.date_field :org_at %>
+<%=f.time_field :tim_at %>
+
+<% ## тут нада придумати як це пофыксити %>
+
+<%= f.submit "Confirm"%>
+
+<%end%>
+
+
+<% end %>
+
+
+
+<div style="text-align: center;">
+
+
+
+</div>
+<hr>
+<%end%>
+<%else%>
+<h1 style="text-align: center; color: green;">У вас немає товарів</h1>
+<%end%>
+
+
+
+
+

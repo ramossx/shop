@@ -1,0 +1,25 @@
+<div class="boxmenu">
+        <img src="../images/logo.png" alt="logo" class="logo">
+        <nav>
+          <ul class="menu">
+            <% if current_user.nil? %>
+              <li>
+                <%= link_to "Увійти", new_user_session_path %>
+              </li>
+              <li>
+                <%= link_to "Зареєструватися", new_user_registration_path %>
+              </li>
+            <% else %> 
+              <li>
+                <%= link_to "Головна", root_path %>
+              </li>
+              <li>
+                <%= link_to "Корзина", orders_path %>
+              </li>
+              <li>
+                 <%= link_to "Вийти",destroy_user_session_path, method: :delete %>
+              </li>
+            <%end%>
+          </ul>
+        </nav>
+</div>

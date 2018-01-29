@@ -1,0 +1,10 @@
+<%= form_for @itemcomment, url:itemcomment_path do |f| %>
+ <% if @itemcomment.errors.any?  %>itemcomment
+   <% @itemcomment.errors.full_messages.each do |msg| %>
+   <li><%= msg%></li>
+   <%end%>
+   <%end%>
+
+<%= render 'itemcomment/form', f:f%>
+
+<% end %>

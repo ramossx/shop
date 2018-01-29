@@ -1,0 +1,176 @@
+body {
+	margin: 0;
+	background: #fff;
+}
+
+h3 {
+	font-size: 24px;
+	color: #555;
+	text-align: center;
+}
+
+div {
+	box-sizing:  border-box;
+}
+
+header {
+	background: url(../images/bg.jpeg) no-repeat center top / cover;
+	width: 100%;
+	height: 680px;
+}
+
+nav {
+	float: right;
+}
+
+.cont {
+	width: 80%;
+	min-height: 80.9vh;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+
+.boxmenu {
+	position: fixed;
+	width: 100%;
+	height: 48px;
+	background: #777;
+	z-index: 2;
+	margin-top: -48px;
+}
+
+.logo {
+	float: left;
+	margin-left: 10%;
+	margin-top: 10px;
+	height:	28px;
+	width: 110px;
+}
+
+.menu {
+	padding: 0;
+	margin: 0;
+	float: right;
+	margin-top: 10px;
+}
+
+.menu li {
+	float: left;
+	display: block;
+	margin-right: 40px;
+}
+
+.menu a {
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+.info {
+	height: 600px;
+	width: 400px;
+	margin-left: 10%;
+	padding-top: 160px;
+}
+
+.info a {
+	background: #f2b33d;
+	color: #333;
+	font-size: 24px;
+	width: 200px;
+	height: 70px;
+	display: block;
+	text-decoration: none;
+	margin-top: 90px;
+	padding-top: 16px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.title p {
+	color: #555;
+	font-size: 36px;
+	text-align: center;
+	margin-top: 40px;
+	font-weight: bold;
+}
+
+.pluses div {
+	text-align: center;
+	width: 25%;
+	float: left;
+	color: #555;
+}
+
+.pluses img {
+	width: 80px;
+	height: 80px;
+	margin-bottom: 20px;
+}
+
+.pluses p {
+	margin-top: 20px;
+}
+
+.pluses {
+	margin-top: 90px;
+}
+
+.pluses:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.userimg {
+	margin: 0 auto;
+}
+
+.category_block {
+	display: inline;
+}
+
+.category {
+	background: #8bd8c4;
+	
+	width: 80%;
+	height: 120px;
+	margin: 60px auto;
+	transition: all 200ms ease-in;
+	padding-top: 40px;
+}	
+
+.category a {
+	text-decoration: none;
+	color: #555;
+}
+
+.category:hover {
+	width: 82%;
+	height: 125px;
+	box-shadow: 4px 4px 7px
+}
+
+.box {
+	transition: all 200ms ease-in;
+	width: 25%;
+	height: 140px;
+	display: inline-block;
+	margin: 20px 60px 20px 60px;
+}
+
+.box:hover {
+	box-shadow: 4px 4px 7px;
+	width: 28%;
+	height: 150px;
+}
+
+footer {
+	margin-top: 37%;
+	width: 100%;
+	height: 60px;
+	background: #666;
+	color: #ccc;
+	text-align: center;
+	padding-top: 20px;
+}

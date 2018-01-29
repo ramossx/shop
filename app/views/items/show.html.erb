@@ -1,0 +1,21 @@
+
+<br>
+<%=@item.name%>
+<br>
+<%=@item.categorie.name%>
+<br>
+<%=@item.description%>
+<br>
+<hr>
+<div>
+<% @comments.each do |comment| %>
+   <h5><b><%=comment.user.email%></b> says:
+   <%=comment.text%> </h5>
+<%end%>
+</div>
+<hr>
+<div>
+	<%=form_for :itemcomment ,url:item_itemcomments_path(@item.id) do |f| %>
+	<%=render 'itemcomments/form' ,f:f%>
+	<%end%>
+</div>

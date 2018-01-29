@@ -1,0 +1,11 @@
+ <hr>
+<div class="container-fluid text-center bg-grey" style="background-color: #ddd;">
+
+</br>
+	<h1><%= @categorie.name %></h1>
+</br>
+</div>
+<hr>
+<%@items.each do |item|%>
+<%= render 'items/elem',item:item %>
+<%end%>
