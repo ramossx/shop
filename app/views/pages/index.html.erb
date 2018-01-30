@@ -7,27 +7,4 @@
 </br>
 </div>
 
-<div>
-	<div class="container" style="padding-left: 3%;">
-	<div class="container-fluid text-center bg-grey">
-	<%@categories.each do |categorie|%>
-
-	  <div class="box">
-	    <div>
-			
-			<p><strong><h3 style="color: #0772A1;">
-				<b><%= link_to categorie.name, category_path(categorie.id) %></b>
-				</h3></strong></p>
-			<p><%= categorie.description %> </p>
-			<p><%= link_to "Детальніше", category_path(categorie.id), class: "btn btn-default"%></p>
-			
-			</br>
-			</div>
-
-	</div>
-
-	<%end%>
-	</div>
-	</div>
-</div>
 
